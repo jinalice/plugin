@@ -1,0 +1,288 @@
+/*@minScale : 限制最外侧内容的比例(最外侧内容比例永远>=此值)*/
+body,
+ul,
+li,
+img,
+div,
+dl {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  outline: none;
+  display: block;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  outline: none;
+}
+.scroll-gallery {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+.scroll-gallery ul {
+  position: relative;
+  list-style-type: none;
+}
+.scroll-gallery ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.scroll-gallery ul li {
+  float: left;
+  position: relative;
+}
+.scroll-gallery ul li a {
+  display: block;
+  width: 100%;
+}
+.scroll-gallery ul li a img {
+  width: 100%;
+}
+.scroll-gallery .scroller-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.scroll-gallery .scroll-btn-prev,
+.scroll-gallery .scroll-btn-next {
+  cursor: pointer;
+  color: #444;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 10;
+}
+.scroll-gallery .scroll-btn-prev i,
+.scroll-gallery .scroll-btn-next i {
+  font-style: normal;
+}
+.scroll-gallery .scroll-btn-prev {
+  left: 0;
+}
+.scroll-gallery .scroll-btn-next {
+  right: 0;
+}
+.spice-md-movecenter .scroller-wrap ul {
+  width: 100%;
+  overflow: hidden;
+}
+.spice-md-movecenter .scroller-wrap ul li {
+  width: 0 ;
+  overflow: hidden;
+}
+.spice-md-movecenter .scroller-wrap ul li a {
+  padding: 0 ;
+  display: block;
+  margin: 0 auto;
+}
+.spice-md-movecenter .scroller-wrap ul li .spice-md-movecenter-text h3 {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.spice-md-movecenter .scroller-wrap ul li .spice-md-movecenter-text p {
+  font-size: 14px;
+  text-align: center;
+}
+.spice-md-movecenter .scroller-wrap .spice-md-movecenter-text h3 {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.spice-md-movecenter .scroller-wrap .spice-md-movecenter-text p {
+  font-size: 14px;
+  text-align: center;
+}
+.spice-md-movecenter-3d .scroller-wrap ul {
+  width: 100%;
+}
+.spice-md-movecenter-3d .scroller-wrap ul li {
+  width: 0 ;
+}
+.spice-md-movecenter-3d .scroller-wrap ul li a {
+  padding: 0 ;
+  display: block;
+  margin: 0 -50%;
+  width: 200%;
+  position: relative;
+}
+.spice-md-movecenter-3 .scroller-wrap ul li:first-child,
+.spice-md-movecenter-3 .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-3 .scroller-wrap ul li:nth-child(3) {
+  width: 33.33333333%;
+}
+.spice-md-movecenter-3 .scroller-wrap ul li:first-child a,
+.spice-md-movecenter-3 .scroller-wrap ul li:nth-child(3) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  opacity: 0.5;
+}
+.spice-md-movecenter-5 .scroller-wrap ul li:first-child,
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(3),
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(4),
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(5) {
+  width: 20%;
+}
+.spice-md-movecenter-5 .scroller-wrap ul li:first-child a,
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(5) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  opacity: 0.5;
+}
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(2) a,
+.spice-md-movecenter-5 .scroller-wrap ul li:nth-child(4) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.67479675);
+  -webkit-transform: scale(0.67479675);
+  -moz-transform: scale(0.67479675);
+  -ms-transform: scale(0.67479675);
+  -o-transform: scale(0.67479675);
+  opacity: 0.67479675;
+}
+.spice-md-movecenter-7 .scroller-wrap ul li:first-child,
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(3),
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(4),
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(5),
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(6),
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(7) {
+  width: 14.28571429%;
+}
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(4) {
+  z-index: 4;
+}
+.spice-md-movecenter-7 .scroller-wrap ul li:first-child a,
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(7) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  opacity: 0.5;
+  z-index: 1;
+}
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(2) a,
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(6) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.53542393);
+  -webkit-transform: scale(0.53542393);
+  -moz-transform: scale(0.53542393);
+  -ms-transform: scale(0.53542393);
+  -o-transform: scale(0.53542393);
+  opacity: 0.53542393;
+  z-index: 2;
+}
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(3) a,
+.spice-md-movecenter-7 .scroller-wrap ul li:nth-child(5) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.76771196);
+  -webkit-transform: scale(0.76771196);
+  -moz-transform: scale(0.76771196);
+  -ms-transform: scale(0.76771196);
+  -o-transform: scale(0.76771196);
+  opacity: 0.76771196;
+  z-index: 3;
+}
+.spice-md-movecenter-5-3d .scroller-wrap ul li:first-child,
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(3),
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(4),
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(5) {
+  width: 20%;
+}
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(3) {
+  z-index: 4;
+}
+.spice-md-movecenter-5-3d .scroller-wrap ul li:first-child a,
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(5) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  opacity: 0.5;
+  z-index: 1;
+}
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(2) a,
+.spice-md-movecenter-5-3d .scroller-wrap ul li:nth-child(4) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.67479675);
+  -webkit-transform: scale(0.67479675);
+  -moz-transform: scale(0.67479675);
+  -ms-transform: scale(0.67479675);
+  -o-transform: scale(0.67479675);
+  opacity: 0.67479675;
+  z-index: 2;
+}
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:first-child,
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(3),
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(4),
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(5) {
+  width: 20%;
+}
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:first-child a,
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(2) a,
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(4) a,
+.spice-md-movecenter-5-equalHeight .scroller-wrap ul li:nth-child(5) a {
+  /*@x整屏number数量  @yindex值*/
+  transform: scale(0.67479675);
+  -webkit-transform: scale(0.67479675);
+  -moz-transform: scale(0.67479675);
+  -ms-transform: scale(0.67479675);
+  -o-transform: scale(0.67479675);
+  opacity: 0.67479675;
+}
+.spice-md-movecenter-3-notsetsize .scroller-wrap ul li:first-child,
+.spice-md-movecenter-3-notsetsize .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-3-notsetsize .scroller-wrap ul li:nth-child(3) {
+  width: 33.33333333%;
+}
+.spice-md-movecenter-5-notsetsize .scroller-wrap ul li:first-child,
+.spice-md-movecenter-5-notsetsize .scroller-wrap ul li:nth-child(2),
+.spice-md-movecenter-5-notsetsize .scroller-wrap ul li:nth-child(3),
+.spice-md-movecenter-5-notsetsize .scroller-wrap ul li:nth-child(4),
+.spice-md-movecenter-5-notsetsize .scroller-wrap ul li:nth-child(5) {
+  width: 20%;
+}
+.scroll-dots {
+  position: absolute;
+  bottom: -30px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scroll-dots a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #828790;
+  cursor: pointer;
+  text-indent: -1000em;
+}
+.scroll-dots a.active {
+  background-color: #444;
+}

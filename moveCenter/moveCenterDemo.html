@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/3D.js"></script>
+</head>
+<body>
+	<div>
+	    <div>
+			<div class="scroll-gallery spice-md-movecenter-3d spice-md-movecenter-5-3d" id="spice-md-movecenter-wrapperfive-3d">
+				<div class="scroller-wrap">
+					<ul class="float-clearfix" >
+						<li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/1.jpg" width="" height="" /></a>
+			            </li>
+			            <li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/2.jpg" width="" height="" /></a>
+			            </li>
+			            <li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/3.jpg" width="" height="" /></a>
+			            </li>
+			            <li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/4.jpg" width="" height="" /></a>
+			            </li>
+			            <li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/5.jpg" width="" height="" /></a>
+			            </li>
+			            <li>
+			                <a href="http://www.baidu.com/" class="movecenter-click" class="movecenter-click" ><img src="images/6.jpg" width="" height="" /></a>
+			            </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript">
+	$('#spice-md-movecenter-wrapperfive-3d').moveCenter({
+			infinite : true ,
+			prevOrNot : true ,
+			nextOrNot : true ,
+			clickOrNot : true,
+			dots : true,
+			initCount: {
+				set : true,
+				initCountNumber: 0
+			},
+			breakpoints: {
+				set : true,
+				width : 1024,
+				number : 3
+			},	
+			selfCalc:{
+			    set : true,
+			    secondScale : 0.8
+			},
+			autoPlay : true ,
+			number : 5 ,
+			equalHeight : false,
+			minScale : 0.5,
+			set3D : true,
+			addPcScroll : true,
+			setSize : function( objParent , scale , oUl ,self ){
+				var $obj = objParent.find('a.movecenter-click');
+				$obj.css( 'transform' , 'scale('+scale+')' );
+				// opcity  用 css 去控制1
+				/* $obj.css( 'opacity' , 1 ); */
+				/* $obj.css( 'opacity' , scale ); */
+				/* objParent.css('z-index' , Math.round(6*scale)); */
+
+				if( objParent.index() > this.count ){
+					var $disNumber = objParent.index() - this.count;
+					objParent.css('z-index' , Math.round(6*scale) - $disNumber );
+				}else{
+					objParent.css('z-index' , Math.round(6*scale));
+				}
+			}
+			} );
+	</script>
+</html>
